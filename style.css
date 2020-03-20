@@ -7,8 +7,28 @@ h3 {
   padding-top:20px;
   padding-bottom:17px;
 }
+h5 {
+  outline: solid white 1px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
 .moon {
-  margin-bottom: 20px;
+
+}
+.moonbtn {
+  margin-top: -15px;
+  margin-bottom: 35px;
+}
+.btn-secondary, .btn-danger {
+  outline: solid white 1px;
+  margin-left:20px;
+  margin-right:20px;
+  padding-top: 10px;
+  padding-left:20px;
+  padding-right: 20px;
+}
+p {
+  font-size: 70%;
 }
 .cheese {
   margin-top: 50px;

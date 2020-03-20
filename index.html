@@ -25,7 +25,7 @@
         <img class="img-fluid wg" src="wg(1).jpg" alt="Wallace and Gromit">
       </div>
       <div class="col-4 text-light text-center cheese">
-        <h5 class="">CHEESE RESCUED: <span>--</span></h5>
+        <h5 class="">CHEESE RESCUED: <span id="cheese">--</span></h5>
       </div>
       <div class="col-2">
         <img class="img-fluid wg2" src="wg2(1).jpg" alt="Wallace Eating">
@@ -35,7 +35,7 @@
     <div class="container-fluid">
       <div class="row justify-content-center">
         <div class="col-3">
-          <button class="btn btn-black moon">
+          <button class="btn btn-black moonbtn" onclick="mine()">
           <img class="img-fluid moon" src="moon(1).jpeg" alt="Moon">
           </button>
         </div>
@@ -43,12 +43,15 @@
     </div>
 
     <div class="container-fluid">
-      <div class="row">
+      <div class="row text-center justify-content-around">
         <div class="col-12">
-          <button class="btn btn-dark text-light">Button 1</button>
-          <button class="btn btn-dark text-light">Button 2</button>
-          <button class="btn btn-dark text-light">Button 3</button>
-          <button class="btn btn-dark text-light">Button 4</button>
+          <button class="btn btn-secondary text-light" onclick="teacup()"><b>TEACUP</b><p>50 cheese</p></button>
+
+          <button class="btn btn-secondary text-light" onclick="butterknife()"><b>BUTTERKNIFE</b><p>150 cheese</p></button>
+
+          <button class="btn btn-secondary text-light" onclick="gromit()"><b>GROMIT</b><p>500 cheese</p></button>
+
+          <button class="btn btn-danger text-light" onclick="wereRabbit()"><b>WERE-RABBIT</b><p>1000 cheese</p></button>
         </div>
       </div>
     </div>
@@ -56,7 +59,7 @@
   </main>
   
 
-  <script src="main.js"></script>
+  <script src="game.js"></script>
 </body>
 
 
