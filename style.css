@@ -2,10 +2,14 @@ body {
   background-color: black;
   margin-bottom: 50px;
 }
-h3 {
+header {
   background-color: darkslategray;
   padding-top:20px;
-  padding-bottom:17px;
+  padding-bottom:10px;
+  outline: solid white 5px;
+}
+header p {
+  font-size:110%
 }
 h5 {
   outline: solid white 1px;
