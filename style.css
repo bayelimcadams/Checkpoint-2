@@ -1,0 +1,25 @@
+body {
+  background-color: black;
+  margin-bottom: 50px;
+}
+h3 {
+  background-color: darkslategray;
+  padding-top:20px;
+  padding-bottom:17px;
+}
+.moon {
+  margin-bottom: 20px;
+}
+.cheese {
+  margin-top: 50px;
+}
+.wg, .wg2 {
+
+}
+.wg {
+  padding-top: 17px;
+}
+.wg2 {
+  padding-top: 20px;
+  padding-right: 5px;
+}
