@@ -25,6 +25,7 @@ let automaticUpgrades = {
   }
 };
 
+
 let cheese = 0
 
 function update() {
@@ -40,6 +41,68 @@ function update() {
   document.getElementById("gromit-quantity").innerHTML = automaticUpgrades.gromits.quantity.toString();
   document.getElementById("wereRabbit-quantity").innerHTML = automaticUpgrades.wereRabbits.quantity.toString();
 }
+
+
+// function drawCatMood() {
+//   let catImageElem = document.getElementById("cat-image")
+//   let catStatusElem = document.getElementById("cat-status")
+//   let catMood = randomizeCatMood()
+
+//   catStatusElem.innerText = catMood.status
+//   catImageElem.src = catMood.img
+// }
+
+
+// function giveCatnip() {
+//   if (cat.dosed) {
+//     return
+//   }
+//   let interval = setInterval(drawCatMood, 1000)
+//   setTimeout(function () { cat.dosed = false; clearInterval(interval) }, 10000)
+//   cat.dosed = true
+// }
+
+function collectAutomaticUpgrades () {
+ if (automaticUpgrades.gromits.quantity >= 1) {
+  let interval = setInterval(mine, 3000)
+  cheese = automaticUpgrades.gromits.quantity * automaticUpgrades.gromits.multiplier
+ }
+ if (automaticUpgrades.wereRabbits.quantity >= 1) {
+    let interval = setInterval(mine, 3000)
+    cheese = automaticUpgrades.wereRabbits.quantity * automaticUpgrades.wereRabbits.multiplier
+ }
+}
+
+// function autoUpgrades1 () {
+//   cheese += automaticUpgrades.gromits.multiplier
+// }
+
+// function autoUpgrades2 () {
+//   cheese += automaticUpgrades.wereRabbits.mutiplier
+// }
+
+// set interval should be using the auto upgrades object, going to multiply the quantity by the multiplier (for-in) cheese * quantity * multiplier
+
+
+// function collectAutomaticUpgrades () {
+
+//   for (const upgradeKey in automaticUpgrades) {
+//     if (automaticUpgrades.hasOwnProperty(upgradeKey)) {
+//       let upgrade = automaticUpgrades[upgradeKey];
+//       let interval = setInterval((upgradeKey, 3000) => {
+        
+//       }, interval);
+//     }
+//   }
+// }
+
+
+  // for (const weaponKey in items) {
+  //   if (items.hasOwnProperty(weaponKey)) {
+  //     let weapon = items[weaponKey];
+  //     player.items.push(weapon);
+  //   }
+  // }
 
 
 function mine() {
@@ -73,22 +136,13 @@ function mine() {
 }
 
 function teacup() {
-  if (clickUpgrades.teacups.quantity == 0, cheese >= 50){
-    cheese -= 50;
+  if (cheese >= clickUpgrades.teacups.price){
+    cheese -= clickUpgrades.teacups.price;
     clickUpgrades.teacups.quantity++
     console.log("TEACUP ACQUIRED - " + clickUpgrades.teacups.quantity)
     update()
     clickUpgrades.teacups.price *= 2
   }
-//  try nesting this if statement
-  if (clickUpgrades.teacups.quantity >= 1, cheese >= 100) {
-    cheese -= 100
-    clickUpgrades.teacups.quantity++
-    console.log("TEACUP ACQUIRED - " + clickUpgrades.teacups.quantity)
-    update()
-  }
-
-  
 }
 
 function butterknife() {
@@ -117,5 +171,5 @@ function wereRabbit() {
     update()
   }
 }
-
+collectAutomaticUpgrades()
 update()
