@@ -63,22 +63,23 @@ function update() {
 // }
 
 function collectAutomaticUpgrades () {
- if (automaticUpgrades.gromits.quantity >= 1) {
-  let interval = setInterval(mine, 3000)
-  cheese = automaticUpgrades.gromits.quantity * automaticUpgrades.gromits.multiplier
- }
- if (automaticUpgrades.wereRabbits.quantity >= 1) {
-    let interval = setInterval(mine, 3000)
-    cheese = automaticUpgrades.wereRabbits.quantity * automaticUpgrades.wereRabbits.multiplier
- }
+
+  cheese += automaticUpgrades.gromits.quantity * automaticUpgrades.gromits.multiplier
+
+  cheese += automaticUpgrades.wereRabbits.quantity * automaticUpgrades.wereRabbits.multiplier
+  update()
 }
 
+// let interval = setInterval (autoUpgrades2, 3000)
+
+// }
+
 // function autoUpgrades1 () {
-//   cheese += automaticUpgrades.gromits.multiplier
+//   automaticUpgrades.gromits.multiplier
 // }
 
 // function autoUpgrades2 () {
-//   cheese += automaticUpgrades.wereRabbits.mutiplier
+//   automaticUpgrades.wereRabbits.mutiplier
 // }
 
 // set interval should be using the auto upgrades object, going to multiply the quantity by the multiplier (for-in) cheese * quantity * multiplier
@@ -171,5 +172,7 @@ function wereRabbit() {
     update()
   }
 }
-collectAutomaticUpgrades()
+
+setInterval (collectAutomaticUpgrades, 3000)
+
 update()
